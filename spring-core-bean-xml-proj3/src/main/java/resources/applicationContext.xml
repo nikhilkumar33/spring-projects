@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="emp" class="com.kodewala.spring_core_bean_xml_proj3.Employee">
+    		
+    		<property name="empId" value="1122"/>
+    		<property name="empName" value="Soumya"/>
+    		<property name="empSalary" value="1800000.00"/>
+    
+    </bean>
+
+</beans>
