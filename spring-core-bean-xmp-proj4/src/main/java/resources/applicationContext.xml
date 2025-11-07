@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="order1" class="com.kodewala.spring_core_bean_xmp_proj4.Order">
+    		
+    		<property name="orderId" value="1434" />
+    		<property name="itemName" value="Kodewala Book" />
+    		<property name="status" value="delivered" />
+    		
+    </bean>
+    <bean id="order2" class="com.kodewala.spring_core_bean_xmp_proj4.Order">
+    		
+    		<property name="orderId" value="1122" />
+    		<property name="itemName" value="GK Book" />
+    		<property name="status" value="pending" />
+    		
+    </bean>
+
+</beans>
