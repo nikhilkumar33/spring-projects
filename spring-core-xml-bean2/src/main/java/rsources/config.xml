@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.kodewala.spring_core_xml_bean2.Bank" id="bank">
+    	<property name="accountNum" value="985696285626"/>
+    	<property name="accountType" value="Saving Account"/>
+    	<property name="branch" value="PKD"/>
+    </bean>
+
+</beans>
