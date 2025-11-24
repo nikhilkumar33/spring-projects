@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<form method="post" action="validateLogin">
+		Username: <input type="text" name="username"> 
+		<br/>
+		Password: <input type="text" name="password">
+		<br/><br/>
+		<input type="submit" value="Login">
+	</form>
 </body>
 </html>
