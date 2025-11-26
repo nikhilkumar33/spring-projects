@@ -22,7 +22,7 @@ public class StockController
 	{
 		int newStock = Integer.parseInt(stock);
 		currStock = newStock;
-		return "amazon-re-seller-home";
+		return "amazon-reseller-home";
 	}
 	
 	@RequestMapping("/updateStockPage")
@@ -37,7 +37,7 @@ public class StockController
 	{
 		int newStock = Integer.parseInt(stock);
 		currStock = newStock;
-		return "amazon-re-seller-home";
+		return "amazon-reseller-home";
 	}
 	
 	@RequestMapping("/deleteStockPage")
@@ -51,7 +51,7 @@ public class StockController
 	public String deleteStock()
 	{
 		currStock = 0;
-		return "amazon-re-seller-home";
+		return "amazon-reseller-home";
 	}
 	
 	@RequestMapping("/viewStockPage")

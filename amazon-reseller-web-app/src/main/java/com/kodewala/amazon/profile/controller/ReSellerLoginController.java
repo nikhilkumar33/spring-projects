@@ -17,6 +17,7 @@ import com.kodewala.amazon.bean.UserProfile;
 public class ReSellerLoginController
 {
 	List<UserProfile> al;
+	String name;
 	
 	@RequestMapping("/showProfilePage")
 	public String showProfilePage()
@@ -30,18 +31,20 @@ public class ReSellerLoginController
 		al = new ArrayList<UserProfile>();
 		al.add(userProfile);
 		System.out.println(al);
-		
+		name=userProfile.getFirstName();
 		String userId = generateUserId(userProfile.getFirstName(),userProfile.getMobile());
 		model.addAttribute("userId", userId);
 		
 		return "profile-success";
 	}
+	
 	public String generateUserId(String firstName, String mobile)
 	{
 		String firstFour = firstName.substring(0,4).toLowerCase();
 		String lastFour = mobile.substring(mobile.length() - 4);
 		return firstFour+lastFour;
 	}
+	
 	@GetMapping("/showLoginPage")
 	public String showLoginPage()
 	{
@@ -49,11 +52,12 @@ public class ReSellerLoginController
 	}
 	
 	@PostMapping("/validateLogin")
-	public String validateLogin(@RequestParam("email") String email, @RequestParam("password") String password)
+	public String validateLogin(@RequestParam("email") String email, @RequestParam("password") String password, Model model)
 	{
 		boolean result = validateUser(email, password);
 		if(result) {
-			return "amazon-re-seller-home";
+			model.addAttribute("name",name);
+			return "amazon-reseller-home";
 		}
 		else {
 			return "login-fail";
@@ -75,9 +79,10 @@ public class ReSellerLoginController
 	}
 	
 	@RequestMapping("/home")
-	public String viewHomePage()
+	public String viewHomePage(Model model)
 	{
-		return "amazon-re-seller-home";
+		model.addAttribute("name",name);
+		return "amazon-reseller-home";
 	}
 
 }

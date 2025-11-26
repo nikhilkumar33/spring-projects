@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+   <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,7 +80,7 @@
         </h1>
 
         <p style="color:#555; font-size:16px; margin-bottom:25px;">
-            Welcome to your Amazon Reseller Dashboard!
+             Hello ${name} ! Welcome to your Amazon Reseller Dashboard!
         </p>
 
         <div style="display:flex; flex-direction:column; gap:15px;">
