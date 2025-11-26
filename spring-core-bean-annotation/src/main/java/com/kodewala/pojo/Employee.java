@@ -1,5 +1,4 @@
 package com.kodewala.pojo;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -31,7 +30,4 @@ public class Employee
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	
-	
-	
 }
