@@ -87,7 +87,7 @@
 
 h2 {
     font-size: 34px;
-    color: #fff7c2; /* very visible soft white-gold */
+    color: #FFFFFF; /* very visible soft white-gold */
     font-weight: 700;
     margin-bottom: 20px;
     text-shadow: 0 0 12px rgba(255,247,194,0.8);

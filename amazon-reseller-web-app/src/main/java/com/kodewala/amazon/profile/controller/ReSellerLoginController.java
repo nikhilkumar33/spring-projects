@@ -3,6 +3,8 @@ package com.kodewala.amazon.profile.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.kodewala.amazon.bean.UserProfile;
+import com.kodewala.amazon.entity.UserProfile;
+import com.kodewala.amazon.hibernate.config.ConnectHibernate;
 
 @Controller
 public class ReSellerLoginController
@@ -28,10 +31,17 @@ public class ReSellerLoginController
 	@PostMapping("/createProfile")
 	public String createReSellerProfile(@ModelAttribute UserProfile userProfile, Model model)
 	{
+		ConnectHibernate connect = new ConnectHibernate();
+		Session session = connect.getHibernateConnection();
+		Transaction txn = session.beginTransaction();
+		session.save(userProfile);
+		txn.commit();
+		
 		al = new ArrayList<UserProfile>();
 		al.add(userProfile);
 		System.out.println(al);
 		name=userProfile.getFirstName();
+		
 		String userId = generateUserId(userProfile.getFirstName(),userProfile.getMobile());
 		model.addAttribute("userId", userId);
 		

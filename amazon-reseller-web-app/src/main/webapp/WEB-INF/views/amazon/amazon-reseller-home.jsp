@@ -84,20 +84,20 @@
         </p>
 
         <div style="display:flex; flex-direction:column; gap:15px;">
-            <a href="createStockPage" style="padding:12px; background:#ff9900; color:white; text-decoration:none; font-size:16px; font-weight:bold; border-radius:10px; box-shadow:0 6px 15px rgba(255,153,0,0.4); transition:0.3s;">
-                ➕ Create Stock
+            <a href="showAddProductPage" style="padding:12px; background:#ff9900; color:white; text-decoration:none; font-size:16px; font-weight:bold; border-radius:10px; box-shadow:0 6px 15px rgba(255,153,0,0.4); transition:0.3s;">
+                ➕ Add Product
             </a>
 
-            <a href="updateStockPage" style="padding:12px; background:#1a73e8; color:white; text-decoration:none; font-size:16px; font-weight:bold; border-radius:10px; box-shadow:0 6px 15px rgba(26,115,232,0.4); transition:0.3s;">
-                ✏ Update Stock
+            <a href="showUpdateProductPage" style="padding:12px; background:#1a73e8; color:white; text-decoration:none; font-size:16px; font-weight:bold; border-radius:10px; box-shadow:0 6px 15px rgba(26,115,232,0.4); transition:0.3s;">
+                ✏ Update Product
             </a>
 
-            <a href="deleteStockPage" style="padding:12px; background:#d93025; color:white; text-decoration:none; font-size:16px; font-weight:bold; border-radius:10px; box-shadow:0 6px 15px rgba(217,48,37,0.4); transition:0.3s;">
-                🗑 Delete Stock
+            <a href="showDeleteProductPage" style="padding:12px; background:#d93025; color:white; text-decoration:none; font-size:16px; font-weight:bold; border-radius:10px; box-shadow:0 6px 15px rgba(217,48,37,0.4); transition:0.3s;">
+                🗑 Delete Product
             </a>
 
-            <a href="viewStockPage" style="padding:12px; background:#34a853; color:white; text-decoration:none; font-size:16px; font-weight:bold; border-radius:10px; box-shadow:0 6px 15px rgba(52,168,83,0.4); transition:0.3s;">
-                👁 View Stock
+            <a href="showViewProductPage" style="padding:12px; background:#34a853; color:white; text-decoration:none; font-size:16px; font-weight:bold; border-radius:10px; box-shadow:0 6px 15px rgba(52,168,83,0.4); transition:0.3s;">
+                👁 View Product
             </a>
         </div>
     </div>
