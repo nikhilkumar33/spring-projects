@@ -28,6 +28,7 @@ public class RegisterUserDAO
 		passwordLog.setUserId(userId);
 		passwordLog.setCurrentPassword(users.getPassword());
 		session.save(passwordLog);
+		
 		tnx.commit();
 		
 		return userId;

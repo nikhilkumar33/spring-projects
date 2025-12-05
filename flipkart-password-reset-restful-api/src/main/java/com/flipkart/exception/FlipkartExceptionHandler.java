@@ -19,5 +19,26 @@ public class FlipkartExceptionHandler
 		
 		return ResponseEntity.ok(errorResponse);
 	}
+	
+	@ExceptionHandler(PasswordAlreadyExistException.class)
+	public ResponseEntity<ErrorResponse> handlePasswordAlreadyExistException(PasswordAlreadyExistException ex)
+	{
+		ErrorResponse errorResponse = new ErrorResponse();
+		errorResponse.setErrorCode("PSW-201");
+		errorResponse.setErrorMessage(ex.getMessage());
+		
+		return ResponseEntity.ok(errorResponse);
+	}
+	
+	@ExceptionHandler(EmailNotFoundException.class)
+	public ResponseEntity<ErrorResponse> handleEmailNotFoundException(EmailNotFoundException ex)
+	{
+		ErrorResponse errorResponse = new ErrorResponse();
+		errorResponse.setErrorCode("PSW-201");
+		errorResponse.setErrorMessage(ex.getMessage());
+		
+		return ResponseEntity.ok(errorResponse);
+	}
+
 
 }

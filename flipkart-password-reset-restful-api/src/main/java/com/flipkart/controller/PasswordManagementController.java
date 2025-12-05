@@ -17,7 +17,7 @@ public class PasswordManagementController
 	
 	
 	@PostMapping("resetPassword")
-	public ResponseEntity resetPassword(@RequestBody ResetPassword resetPassword)
+	public ResponseEntity<String> resetPassword(@RequestBody ResetPassword resetPassword)
 	{
 		System.out.println(resetPassword.getEmail());
 		

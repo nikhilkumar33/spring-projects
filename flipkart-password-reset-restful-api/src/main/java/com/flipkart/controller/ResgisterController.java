@@ -16,7 +16,7 @@ public class ResgisterController
 	RegisterService registerService;
 	
 	@PostMapping("register")
-	public ResponseEntity registerUser(@RequestBody UserInfo userInfo)
+	public ResponseEntity<String> registerUser(@RequestBody UserInfo userInfo)
 	{
 		System.out.println("User Info: "+userInfo.getFirstName()+" "+userInfo.getEmail());
 		
