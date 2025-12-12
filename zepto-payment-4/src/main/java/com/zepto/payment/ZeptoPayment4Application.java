@@ -1,0 +1,13 @@
+package com.zepto.payment;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ZeptoPayment4Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ZeptoPayment4Application.class, args);
+	}
+
+}

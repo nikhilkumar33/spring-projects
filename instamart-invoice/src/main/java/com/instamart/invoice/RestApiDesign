@@ -1,0 +1,4 @@
+Method: Post URL: /generateInvoice
+Content-type: Application/json
+request: invValue, gstNo, status, note, description
+response: invId, message

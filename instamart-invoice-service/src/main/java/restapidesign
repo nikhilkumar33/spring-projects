@@ -1,0 +1,30 @@
+Design for Generate Invoice
+
+Method: POST  URL: /generateInvoice
+Content-type: Application/json
+request: invValue, gstNo, note, status, description
+response: message,invId
+
+
+Design for Retrieve Invoice
+
+Method: GET URL: /getInvoiceById
+Content-type: Application/json
+request: invId
+response: invId, invValue, gstNo, note, status, description
+
+
+Design for Update Invoice
+
+Method: PATCH URL: /updateInvoice
+Content-type: Application/json
+request: update data
+response: message,invId
+
+
+Design for Delete Invoice
+
+Method: DELETE URL: /deleteInvoice
+Content-type: Application/json
+request: invId
+response: message
