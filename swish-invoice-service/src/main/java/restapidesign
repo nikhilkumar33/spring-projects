@@ -1,0 +1,23 @@
+Design for generating Invoice
+
+Method: POST, URL: /generateInvoice
+Content-type: Application/json
+Request: invValue, gstNo, status, note, description
+Response: invId,message
+
+Design for getting invoice by status
+Method: GET URL: /getInvoiceByStatus/{status}
+Request: status
+Response: All invoices
+
+Design for getting invoice by status and filtering the invoice value
+Method: GET URL: /getInvoiceByFilter/{status}/{invValue}
+Request: status,invValue
+Response: All invoices
+
+
+Design for get invoice by value
+
+Method: GET, URL: /getInvoiceByValue/{invValue}
+Request: invValue
+Response: All invoices
