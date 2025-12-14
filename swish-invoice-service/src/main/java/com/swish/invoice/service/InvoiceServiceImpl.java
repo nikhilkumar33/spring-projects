@@ -18,9 +18,6 @@ public class InvoiceServiceImpl implements InvoiceService
 	
 	@Autowired
 	InvoiceRepository invoiceRepository;
-	
-	@Autowired
-	EntityManager entityManager;
 
 	@Override
 	public int saveInvoice(InvoiceRequest invoiceRequest) {
@@ -41,8 +38,7 @@ public class InvoiceServiceImpl implements InvoiceService
 		
 		//List<InvoiceEntity> invoices = invoiceRepository.findInvoiceByStatus(status);
 		
-		List<InvoiceEntity> invoices = entityManager.createNamedQuery("InvoiceEntity.filterByStatus",InvoiceEntity.class)
-							.setParameter("status", status).getResultList();
+		List<InvoiceEntity> invoices = invoiceRepository.filterByStatus(status);
 		
 		if(invoices.isEmpty())
 		{
@@ -54,9 +50,7 @@ public class InvoiceServiceImpl implements InvoiceService
 	@Override
 	public List<InvoiceEntity> getInvoiceByFilter(String status, int invValue) {
 		
-		List<InvoiceEntity> invoices = entityManager.createNamedQuery("InvoiceEntity.filterByStatusAndValue",InvoiceEntity.class)
-														.setParameter("status", status).setParameter("invValue", invValue).getResultList();
-		
+		List<InvoiceEntity> invoices =  invoiceRepository.filterByStatusAndValue(status, invValue);
 		if(invoices.isEmpty())
 		{
 			throw new NoDataFoundException("No data found");

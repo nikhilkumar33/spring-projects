@@ -14,4 +14,8 @@ public interface InvoiceRepository extends CrudRepository<InvoiceEntity, Integer
 	List<InvoiceEntity> findInvoiceByStatus(String status);
 	
 	List<InvoiceEntity> findInvoiceByInvValue(int invValue);
+	
+	List<InvoiceEntity> filterByStatusAndValue(String status, int invValue);
+	
+	List<InvoiceEntity> filterByStatus(String status);
 }
