@@ -11,8 +11,8 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "invoice")
 
-@NamedQuery(name ="filterByStatusAndValue", 
-query = "from InvoiceEntity where status = :status and invValue < :invValue")
+@NamedQuery(name ="InvoiceEntity.filterByStatusAndValue", 
+					query = "from InvoiceEntity where status = :status and invValue < :invValue")
 @NamedQuery(name = "InvoiceEntity.filterByStatus", query = "from InvoiceEntity where status = :status" )
 
 public class InvoiceEntity 

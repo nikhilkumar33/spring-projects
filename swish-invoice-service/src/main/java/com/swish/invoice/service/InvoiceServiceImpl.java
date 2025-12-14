@@ -54,7 +54,7 @@ public class InvoiceServiceImpl implements InvoiceService
 	@Override
 	public List<InvoiceEntity> getInvoiceByFilter(String status, int invValue) {
 		
-		List<InvoiceEntity> invoices = entityManager.createNamedQuery("filterByStatusAndValue",InvoiceEntity.class)
+		List<InvoiceEntity> invoices = entityManager.createNamedQuery("InvoiceEntity.filterByStatusAndValue",InvoiceEntity.class)
 														.setParameter("status", status).setParameter("invValue", invValue).getResultList();
 		
 		if(invoices.isEmpty())
