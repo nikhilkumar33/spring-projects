@@ -1,0 +1,12 @@
+package com.zepto.order.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.zepto.order.entity.OrderEntity;
+
+@Repository
+public interface OrderRespository extends JpaRepository<OrderEntity, Integer>
+{
+
+}
