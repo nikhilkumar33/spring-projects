@@ -29,7 +29,7 @@ public class SearchServiceImplementation implements SearchService
 		product = repository.save(product);
 		return product.getProdId();
 	}
-	@Cacheable(value = "products-new6", key = "#prodName", unless = "#result == null")
+	@Cacheable(value = "products-new", key = "#prodName", unless = "#result == null")
 	@Override
 	public List<Product> getProductDetails(String prodName) {
 

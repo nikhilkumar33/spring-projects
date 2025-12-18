@@ -1,0 +1,6 @@
+Design for add payment
+
+Method: PUT Url: /makePayment
+Content-type: application/json
+Request: fromAccount, toAccount, amount
+Response: Payment result

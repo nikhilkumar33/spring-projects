@@ -1,5 +1,6 @@
-package com.sbi.banking.entity;
+package com.payment.transaction.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,23 +9,20 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 
 @Entity
-@Table
-public class Account
+@Table(name="sbiaccount")
+public class AccountEntity
 {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int id;
+	@Column(unique = true)
 	private String accountNo;
-	
+	private double balance;
 	@Transient
 	private String password;
-	private int balance;
-	private String mobile;
-	private String aadharNo;
+	private String branch;
+	private String status = "A";
 	
-	
-	
-	private String status= "Active";
 	public int getId() {
 		return id;
 	}
@@ -37,29 +35,23 @@ public class Account
 	public void setAccountNo(String accountNo) {
 		this.accountNo = accountNo;
 	}
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
 	public String getPassword() {
 		return password;
 	}
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public int getBalance() {
-		return balance;
+	public String getBranch() {
+		return branch;
 	}
-	public void setBalance(int string) {
-		this.balance = string;
-	}
-	public String getMobile() {
-		return mobile;
-	}
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
-	public String getAadharNo() {
-		return aadharNo;
-	}
-	public void setAadharNo(String aadharNo) {
-		this.aadharNo = aadharNo;
+	public void setBranch(String branch) {
+		this.branch = branch;
 	}
 	public String getStatus() {
 		return status;
@@ -68,4 +60,5 @@ public class Account
 		this.status = status;
 	}
 	
+
 }

@@ -77,5 +77,6 @@ public class FundTransferServiceImpl implements FundTransferService {
 
 		return "Amount transfered successfully";
 	}
-
+	
+	
 }
